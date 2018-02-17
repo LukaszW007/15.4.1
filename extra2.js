@@ -18,5 +18,6 @@ function shuffleIt(...args) {
     });
     console.log(array);
 }
-
+shuffleIt([1,2,3,4,5],[1,2]);
+shuffleIt([1,2,3,4,5],[1,2],[3,4]);
 shuffleIt([1, 2, 3, 4, 5], [1, 2], [3, 4], [2, 3]);
