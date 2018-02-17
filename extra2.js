@@ -7,3 +7,16 @@ shuffleIt([1,2,3,4,5],[1,2]) should return [1,3,2,4,5]
 shuffleIt([1,2,3,4,5],[1,2],[3,4]) should return [1,3,2,5,4]
 shuffleIt([1,2,3,4,5],[1,2],[3,4],[2,3]) should return [1,3,5,2,4]
 ```*/
+
+function shuffleIt(...args) {
+    const [array, ...rest] = args;
+    rest.forEach(restArg => {
+        const [restArg1, restArg2] = restArg;
+        let temporary = array[restArg1];
+        array[restArg1] = array[restArg2];
+        array[restArg2] = temporary;
+    });
+    console.log(array);
+}
+
+shuffleIt([1, 2, 3, 4, 5], [1, 2], [3, 4], [2, 3]);
