@@ -9,5 +9,7 @@ const average = (...args) => {
         console.log(`${arg} oraz suma ${sum}`)
     });
     console.log(`srednia to: ${sum / args.length}`)
+    sum=0;
 };
 average(one,tow,three,four,five,six,seven,eight,nine);
+average(one,tow);
